@@ -19,6 +19,11 @@ class App extends Component {
   state = {
     role: 1
   };
+
+  changeRole = role => {
+    this.setState({ role: role });
+  };
+
   render() {
     return (
       <div className="App">
