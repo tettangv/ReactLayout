@@ -1,4 +1,5 @@
 import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 
 class Home extends React.Component {
   constructor(props) {
@@ -10,18 +11,16 @@ class Home extends React.Component {
     };
   }
   render() {
-    console.log(this.state.getItem);
+    console.log("ITEM: " + this.state.getItem);
     return (
-      <div>
-        Welcome Home Page
-        <img
-          src="https://react-bootstrap.github.io/logo.svg"
-          //   src="../img/logo.png"
-          width="100"
-          height="20"
-          className="d-inline-block align-top"
-        />
-      </div>
+      <Container>
+        <Row>
+          <Col md={{ span: 10, offset: 1 }}>
+            w13wf4w56ef1ew3f4w56f 546wfw5e6f4w56f4 ewf56f46 we1f6w5fe6w
+            we3fewf56
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }

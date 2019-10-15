@@ -51,11 +51,13 @@ class Header extends Component {
               height="70"
             />
           </NavbarBrand>
+
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
+            {/* {this.state.role > 0 ? ( */}
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="#/" onClick={this.toggle}>
+                <NavLink href="#/login" onClick={this.toggle}>
                   Login
                 </NavLink>
               </NavItem>
@@ -80,6 +82,7 @@ class Header extends Component {
                 </NavLink>
               </NavItem>
             </Nav>
+            {/* ) : null} */}
           </Collapse>
         </Navbar>
       </div>
