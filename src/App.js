@@ -46,18 +46,20 @@ class App extends Component {
               <section id="body" className="bodymainpage">
                 <Row>
                   <Col
-                    md={{ span: 10, offset: 1 }}
-                    sm={{ span: 10, offset: 1 }}
-                    xs={12}
+                    md={{ span: 11, offset: 0 }}
+                    sm={{ span: 11, offset: 0 }}
+                    xs={11}
                   >
                     <div className="bodycontent">
                       {/* Authen */}
 
                       <Router>
                         <Switch>
-                          {/* <Route exact path="/">
-                                <Redirect to="/login" />
-                              </Route> */}
+                          {this.state.role === 0 ? (
+                            <Route exact path="/">
+                              <Redirect to="/login" />
+                            </Route>
+                          ) : null}
                           <Route path="/login" component={Login} />
                           <RouteLayout
                             exact
