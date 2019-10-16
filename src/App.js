@@ -55,8 +55,17 @@ class App extends Component {
 
                       <Router>
                         <Switch>
-                          {/* <Redirect to="/login" /> */}
+                          {/* <Route exact path="/">
+                                <Redirect to="/login" />
+                              </Route> */}
                           <Route path="/login" component={Login} />
+                          <RouteLayout
+                            exact
+                            path="/"
+                            component={() => (
+                              <Home role={this.state.role} item="test." />
+                            )}
+                          />
                           <RouteLayout
                             path="/cal"
                             component={() => (
@@ -72,14 +81,6 @@ class App extends Component {
                               <Admin userRole={this.state.role} />
                             )}
                           />
-
-                          <RouteLayout
-                            path="/"
-                            component={() => (
-                              <Home role={this.state.role} item="test." />
-                            )}
-                          />
-
                           <Route component={PageNotFound} />
                         </Switch>
                       </Router>
