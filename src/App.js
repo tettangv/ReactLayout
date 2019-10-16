@@ -74,7 +74,6 @@ class App extends Component {
                           />
 
                           <RouteLayout
-                            exat
                             path="/"
                             component={() => (
                               <Home role={this.state.role} item="test." />
