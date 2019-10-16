@@ -7,7 +7,6 @@ const RouteLayout = ({ component: Component, ...rest }) => {
   //todo: logic for validate user
 
   return (
-<<<<<<< Updated upstream
     <Route
       {...rest}
       render={matchProps => (
@@ -16,15 +15,6 @@ const RouteLayout = ({ component: Component, ...rest }) => {
         </HomeLayout>
       )}
     />
-=======
-    <Route {...rest} render={matchProps => (
-      <HomeLayout>
-        <Component {...Component} />
-      </HomeLayout>
-
-
-    
->>>>>>> Stashed changes
   );
 };
 
