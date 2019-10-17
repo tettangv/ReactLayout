@@ -46,17 +46,28 @@ class App extends Component {
               <section id="body" className="bodymainpage">
                 <Row>
                   <Col
-                    md={{ span: 10, offset: 1 }}
-                    sm={{ span: 10, offset: 1 }}
-                    xs={12}
+                    md={{ span: 11, offset: 0 }}
+                    sm={{ span: 11, offset: 0 }}
+                    xs={11}
                   >
                     <div className="bodycontent">
                       {/* Authen */}
 
                       <Router>
                         <Switch>
-                          {/* <Redirect to="/login" /> */}
+                          {this.state.role === 0 ? (
+                            <Route exact path="/">
+                              <Redirect to="/login" />
+                            </Route>
+                          ) : null}
                           <Route path="/login" component={Login} />
+                          <RouteLayout
+                            exact
+                            path="/"
+                            component={() => (
+                              <Home role={this.state.role} item="test." />
+                            )}
+                          />
                           <RouteLayout
                             path="/cal"
                             component={() => (
@@ -72,15 +83,6 @@ class App extends Component {
                               <Admin userRole={this.state.role} />
                             )}
                           />
-
-                          <RouteLayout
-                            exat
-                            path="/"
-                            component={() => (
-                              <Home role={this.state.role} item="test." />
-                            )}
-                          />
-
                           <Route component={PageNotFound} />
                         </Switch>
                       </Router>
