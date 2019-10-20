@@ -45,7 +45,7 @@ class Header extends Component {
         <Navbar color="dark" inverse expand="md">
           <NavbarBrand href="/">
             <img
-              src="../assets/images/logo4.png"
+              src="../assets/images/tded2youLogo.png"
               alt=""
               width="200"
               height="70"
